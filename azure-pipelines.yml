@@ -4,10 +4,7 @@ pool:
 
 
 variables:
-  GOBIN:  '$(GOPATH)/bin' # Go binaries path
-  GOROOT: '/usr/local/go1.12' # Go installation path
-  GOPATH: '$(system.defaultWorkingDirectory)/gopath' # Go workspace path
-  modulePath: '$(GOPATH)/src/github.com/$(build.repository.name)' # Path to the module's code
+  GOBIN:  '/opt/hostedtoolcache/go/1.12.6/x64/bin/' # Go binaries path
 
 pr:
 - master      
