@@ -4,7 +4,7 @@ test:
 	@ ginkgo -cover -coverprofile=$(COVERAGE_FILE) $(RACE) ./... 
 
 lint:
-	@ golangci-lint ./..
+	@ golangci-lint run --disable-all -E golint
 
 tool:
 	@ go tool cover -$(MODE)=$(COVERAGE_FILE)
