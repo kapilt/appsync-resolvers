@@ -38,7 +38,7 @@ steps:
 - script: |
     mkdir -p junit-report
     dep ensure
-    go test -v -coverprofile=coverage.txt -covermode count ./pkg/...  ./cmd/... 2>&1 | go-junit-report > junit-report/report.xml
+    go test -v -coverprofile=coverage.txt -covermode count ./... 2>&1 | go-junit-report > junit-report/report.xml
     gocov convert coverage.txt > coverage.json
     gocov-xml < coverage.json > coverage.xml
     mkdir coverage
